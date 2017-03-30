@@ -1,0 +1,43 @@
+{% load static %} <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск контрагентов</title>
+    <style>
+        .block {
+            width: 200px;
+            height: 100px;
+            background: #ccc;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<p>Search:</p><br>
+    <form id="search" action="" method="post">
+        <input name="search" type="text" size="55" form="search">
+        {% csrf_token %}
+        <button type="submit" value="Submit" form="search">find</button>
+    </form>
+<div id="wrapper">
+    <div id="result"></div>
+
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+    <div class="block">4</div>
+    <div class="block">5</div>
+    <div class="block">6</div>
+    <div class="block">7</div>
+    <div class="block">8</div>
+    <div class="block">9</div>
+    <div class="block">10</div>
+    <div class="block">11</div>
+    <div class="block">12</div>
+
+</div>
+<script src="{% static 'common/js/jquery-3.2.0.min.js' %}"></script>
+<script src="{% static 'common/js/myscript.js' %}"></script>
+
+</body>
+</html>
